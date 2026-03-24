@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.29, minimum-scale=0.29, maximum-scale=0.29, user-scalable=no">
+    <title>E2E_Mock</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 1316px;
+            height: 2260px;
+            overflow: hidden;
+            position: relative;
+        }
+        .scaled-position-btn {
+            position: absolute;
+            background: transparent;
+            border: 1px dashed silver;
+            cursor: pointer;
+            z-index: 9999;
+        }
+        .scaled-position-btn:active {
+            background: rgba(0, 255, 0, 0.1);
+        }
+        .btn-thumbsup {
+            left: 1152px;
+            top: 2132px;
+            width: 85px;
+            height: 85px;
+        }
+        .btn-zan0 {
+            left: 450px;
+            top: 595px;
+            width: 100px;
+            height: 72px;
+        }
+    </style>
+</head>
+<body>
+    <img
+        src="crop2260_turn_0.jpg"
+        style="
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1316px;
+            height: auto;
+            max-height: 2252px;
+            object-fit: cover;
+        "
+        alt="主图"
+    >
+
+    <!-- 原有按钮：传递唯一控件ID -->
+    <button
+        class="scaled-position-btn btn-thumbsup"
+        onclick="jumpToResult('btn-thumbsup')"
+    ></button>
+
+    <!-- 新增按钮：传递唯一控件ID -->
+    <button
+        class="scaled-position-btn btn-zan0"
+        onclick="jumpToResult('btn-zan0')"
+    ></button>
+
+    <!-- 简化跳转函数 -->
+    <script>
+        function jumpToResult(controlId) {
+
+            const url = "flag_Fail.html";
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
