@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.29, minimum-scale=0.29, maximum-scale=0.29, user-scalable=no">
+    <title>[页面标题]</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 1316px;
+            height: 2260px;
+            overflow: hidden;
+            position: relative; /* 作为悬浮控件的定位参考 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 固定尺寸图片（宽1316px，高2260px） -->
+    <img
+        src="turn_1.jpg"
+        style="
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1316px;
+            height: 2260px;
+            object-fit: cover; /* 确保图片填满容器（可选，根据需求调整） */
+        "
+        alt="主图"
+    >
+    
+    <script>
+        // 页面加载完成后开始计时
+        window.onload = function() {
+            // 3秒后跳转到指定页面
+            setTimeout(function() {
+                window.location.href = 'flag_Success.html';
+            }, 3000); // 3000毫秒 = 3秒
+        };
+    </script>
+</body>
+</html>
